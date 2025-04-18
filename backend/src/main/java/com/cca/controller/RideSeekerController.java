@@ -53,6 +53,7 @@ public class RideSeekerController {
 			@RequestBody RideSeekerDTO rideSeekerDTO) {
 		String responseMessage = rideSeekerService.updateRideSeeker(rsId, DTOMapping.mapToRideSeeker(rideSeekerDTO));
 		ResponseDTO res = new ResponseDTO(responseMessage);
+		System.out.println("Hello");
 
 		return new ResponseEntity<>(res, HttpStatus.OK);
 	}
